@@ -2,7 +2,7 @@ const Data = () => {
   return (
     <div className="home__data">
       <h1 className="home__title">
-        Shakti 🔥
+        Shakti 🔥🦉
         {/* The svg for the hand emoji */}
         
       </h1>

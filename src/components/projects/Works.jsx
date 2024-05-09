@@ -1,11 +1,11 @@
-import projectsData from './Data'
+import projectsData from "./Data";
 
 const Works = () => {
-
-  return <> 
-
-      {projectsData.map((project) => {
-        const {id, title,description, image, tags} = project; 
+  return (
+    <>
+      {projectsData.reverse().map((project) => {
+        const { id, title, description, image, tags, gitHubLink, demoLink } =
+          project;
         return (
           <div className="project__card" key={id}>
             <div className="project__card-grid">
@@ -13,7 +13,7 @@ const Works = () => {
                 <img className="project__img" src={image} alt={title} />
                 <div className="project__buttons">
                   <a
-                    href="https://buy-me-a-beer-eight.vercel.app/"
+                    href={demoLink}
                     target="_blank"
                     className="project__button demo"
                   >
@@ -21,7 +21,7 @@ const Works = () => {
                     <i className="bx bx-right-arrow-alt project__button-icon"></i>
                   </a>
                   <a
-                    href="https://github.com/shaktiiii/BuyMeABeer"
+                    href={gitHubLink}
                     target="_blank"
                     className="project__button viewCode"
                   >
@@ -42,13 +42,13 @@ const Works = () => {
             </div>
           </div>
         );
-        }) 
-      }
+      })}
       <div className="flex">
-        <a href="https://github.com/shaktiiii" className="viewMore">View More</a>
+        <a href="https://github.com/shaktiiii" className="viewMore">
+          View More
+        </a>
       </div>
-      </>
-
-  
-}
-export default Works
+    </>
+  );
+};
+export default Works;
