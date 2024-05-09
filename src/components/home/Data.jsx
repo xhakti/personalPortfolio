@@ -1,7 +1,7 @@
 const Data = () => {
   return (
     <div className="home__data">
-        <h1 className="home__title">Shaktiii
+        <h1 className="home__title">Xhakti 🦉
         {/* The svg for the hand emoji */}
         <svg
                   width="36"
